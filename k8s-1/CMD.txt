@@ -1,0 +1,35 @@
+---Create a 1 node cluster---
+1.kind create cluster --name local
+
+--Create the node setup
+1. kind create cluster --config clusters.yml --name local2
+
+--TO delete the cluster 
+1.  kind delete cluster --name local2
+
+
+---to check the configuration--
+1. cat /c/Users/siddh/.kube/config
+
+--To check the nodes using the kubeclt--
+1. kubectl get nodes
+
+--If you want to see the exact HTTP request that goes out to the API server, you can add --v=8 flag--
+1. kubectl get nodes --v=8 --v stands for the Verbose
+
+
+--To create the pod
+1. kubectl run nginx --image=nginx --port=80
+
+--TO check if the pod is running
+1. kubectl get pod
+2.kubectl get pods -owide (to detail about the pods running) 
+
+
+--To delete the pod
+1. kubectl delete pod <name>
+
+--To run the pod using the manifest.yml file
+1. kubectl apply -f manifest.yml
+
+
