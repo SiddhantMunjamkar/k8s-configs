@@ -33,3 +33,34 @@
 1. kubectl apply -f manifest.yml
 
 
+--To create the namespaces
+1. kubectl create namespace <name_of_namespace>
+
+--TO get the namespaces
+1. kubectl get namespaces
+
+--To check the namespaces in the pod1
+1. kubectl get pods --all-namespaces
+
+
+--Get the deployments in the namespace
+1. kubectl get deployment -n backend-team
+
+
+--Set the default context to be the namespace
+1. kubectl config set-context --current --namespace=backend-team    
+
+--TO check the kubeclt configuration
+1. kubectl config view
+
+
+--To encoded base64 using the terminal
+1. echo -n "text_value" | base64 
+2. echo -n "encoded_value" | base64  --decode
+
+
+--TO change the host from the windows
+1. nvim /etc/host
+
+--To change the kuberenates config file 
+1. nvim ~/kube/config
